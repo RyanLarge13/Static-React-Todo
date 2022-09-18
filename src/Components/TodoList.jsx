@@ -42,16 +42,17 @@ const TodoList = () => {
   return (
     <>
       <div>
-        <h1>What are your plans today?</h1>
+        <h1 className="title">What are your plans today?</h1>
       </div>
       <TodoForm onSubmit={addToDo} />
-      <Todo
-        todos={todos}
-        completeTodo={completeTodo}
-        removeTodo={removeTodo}
-        updatedTodos={updatedTodos}
-      />
-      */
+      <div className="todo-container">
+        <Todo
+          todos={todos}
+          completeTodo={completeTodo}
+          removeTodo={removeTodo}
+          updatedTodos={updatedTodos}
+        />
+      </div>
     </>
   );
 };

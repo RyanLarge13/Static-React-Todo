@@ -1,0 +1,128 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    padding: 10% 0 0 0;
+    background-image: linear-gradient(-30deg, #5433FF, #20BDFF, #A5FECB);
+    color: #fff;
+}
+
+.title {
+    margin-bottom: 2em;
+    color: #000;
+}
+
+.todo-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em;
+    
+    &:focus {
+        outline: none;
+        border: none;
+    }
+
+    input {
+         background-color: #000;
+         color: #fff;
+         outline: none;
+         border: none;
+    }
+
+}
+
+.todo {
+    width: 100%;
+    padding: .75em;
+    border-radius: .5em;
+}
+
+.addBtn {
+    padding: .75em 1.5em;
+    margin-left: 1em;
+    border-radius: .5em;
+    font-weight: 600;
+    background-image: linear-gradient(30deg, #a8ff78, #78ffd6);
+    border: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.todo-container {
+    height: max-content;
+    min-height: 20vh;
+    max-height: 60vh;
+    width: 100%;
+    background-color: #000;
+    border-radius: .5em;
+    padding: 1em;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.todo-row {
+    margin: 1em 0;
+    width: 100%;
+    padding: 1em;
+    border-radius: .75em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+     &:nth-child(6n + 1) {
+        background-image: linear-gradient(30deg, #DA22FF, #9733EE);
+    }
+     &:nth-child(6n + 2) {
+        background-image: linear-gradient(30deg, #02AAB0, #00CDAC);
+     }
+     &:nth-child(6n + 3) {
+        background-image: linear-gradient(30deg, #e52d27, #b31217);
+     }
+     &:nth-child(6n + 4) {
+        background-image: linear-gradient(30deg, #314755, #26a0da);
+     }
+     &:nth-child(6n + 5) {
+        background-image: linear-gradient(30deg, #e65c00, #F9D423);
+     }
+     &:nth-child(6n + 6) {
+        background-image: linear-gradient(30deg, #ec008c, #fc6767);
+     }
+}
+
+.complete {}
+
+.icons {
+    font-size: 1.25em;
+    transition: 250ms ease-in-out;
+}
+
+.delete-icon {
+
+    &:hover {
+        cursor: pointer;
+        scale: 1.1;
+    }
+}
+
+.edit-icon {
+    margin-left: .75em;
+
+    &:hover {
+        cursor: pointer;
+        scale: 1.1;
+    }
+}
+
